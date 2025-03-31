@@ -4,6 +4,7 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -11,100 +12,116 @@
   color: #fff;
   position: relative;
 }
+
 .container {
-  width: 800px;
-  height: 180px;
+  width: 90%; /* Changed to percentage for responsiveness */
+  max-width: 800px; /* Set a max-width for larger screens */
+  height: auto; /* Allow height to adjust based on content */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center; /* Center text for better alignment */
 }
+
 .clock {
   width: 100%;
-  height: 100%;
+  height: auto; /* Allow height to adjust based on content */
   background: rgba(235, 0, 235, 0.11);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   backdrop-filter: blur(40px);
-}
-.container::before{
-  content:'';
-  width:180px;
-  height:180px;
-  background:#f41b75;
-  border-radius:5px;
-  position:absolute;
-  left:-50px;
-  top:-50px;
-  z-index:-1;
-}.container::after{
-  content:'';
-  width:180px;
-  height:180px;
-  background:#419aff;
-  border-radius:50%;
-  position:absolute;
-  right:-30px;
-  bottom:-50px;
-  z-index:-1;
-}
-.clock span{
-  font-size:80px;
-  width:110px;
-  display:inline-block;
-  text-align:center;
-  position:relative;
-}
-.clock span::after{
-
-  font-size:16px;
-  position:absolute;
-  bottom:-5px;
-  left:50%;
-  transform:translateX(-50%);
-}
-#hrs::after{
-  content:'HOURS';
-
-}
-#min::after{
-  content:'MINS';
-  
-}
-#sec::after{
-  content:'SEC';
-  
+  padding: 20px; /* Add padding for better spacing */
 }
 
-  #day {
-    font-size: 26px;
-    font-weight: bold;
-    color: #caf4f8; /* Stylish yellow-gold color */
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 5px;
-    letter-spacing: 2px;}
-  
-  
+.container::before {
+  content: '';
+  width: 20vw; /* Use viewport width for responsiveness */
+  height: 20vw; /* Use viewport width for responsiveness */
+  background: #f41b75;
+  border-radius: 5px;
+  position: absolute;
+  left: -10vw; /* Adjust for responsiveness */
+  top: -10vw; /* Adjust for responsiveness */
+  z-index: -1;
+}
+
+.container::after {
+  content: '';
+  width: 20vw; /* Use viewport width for responsiveness */
+  height: 20vw; /* Use viewport width for responsiveness */
+  background: #419aff;
+  border-radius: 50%;
+  position: absolute;
+  right: -10vw; /* Adjust for responsiveness */
+  bottom: -10vw; /* Adjust for responsiveness */
+  z-index: -1;
+}
+
+.clock span {
+  font-size: 10vw; /* Use viewport width for responsive font size */
+  width: 15vw; /* Use viewport width for responsive width */
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.clock span::after {
+  font-size: 2vw; /* Use viewport width for responsive font size */
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#hrs::after {
+  content: 'HOURS';
+}
+
+#min::after {
+  content: 'MINS';
+}
+
+#sec::after {
+  content: 'SEC';
+}
+
+#day {
+  font-size: 4vw; /* Use viewport width for responsive font size */
+  font-weight: bold;
+  color: #caf4f8;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
 
 #ampm {
-  font-size: 24px;
+  font-size: 3vw; /* Use viewport width for responsive font size */
   font-weight: bold;
   position: absolute;
-  right: -50px;
-  bottom: 20px;
+  right: -5vw; /* Adjust for responsiveness */
+  bottom: 2vw; /* Adjust for responsiveness */
   color: #f4f4f4;
 }
 
-  #date {
-    font-size: 20px;
-    font-weight: normal;
-    color: #fff;
-    text-align: center;
-    margin-top: 5px;
+#date {
+  font-size: 3vw; /* Use viewport width for responsive font size */
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Media Queries for additional responsiveness */
+@media (max-width: 600px) {
+  .clock span {
+    font-size: 12vw; /* Adjust font size for smaller screens */
   }
 
-
-
+  #day, #ampm, #date {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+}
