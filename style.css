@@ -37,7 +37,7 @@
 }
 
 .container::before {
-  content: '';
+  content: "";
   width: 20vw; /* Use viewport width for responsiveness */
   height: 20vw; /* Use viewport width for responsiveness */
   background: #f41b75;
@@ -49,7 +49,7 @@
 }
 
 .container::after {
-  content: '';
+  content: "";
   width: 20vw; /* Use viewport width for responsiveness */
   height: 20vw; /* Use viewport width for responsiveness */
   background: #419aff;
@@ -77,15 +77,15 @@
 }
 
 #hrs::after {
-  content: 'HOURS';
+  content: "HOURS";
 }
 
 #min::after {
-  content: 'MINS';
+  content: "MINS";
 }
 
 #sec::after {
-  content: 'SEC';
+  content: "SEC";
 }
 
 #day {
@@ -121,7 +121,9 @@
     font-size: 12vw; /* Adjust font size for smaller screens */
   }
 
-  #day, #ampm, #date {
+  #day,
+  #ampm,
+  #date {
     font-size: 5vw; /* Adjust font size for smaller screens */
   }
 }
